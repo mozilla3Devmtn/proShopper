@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html ng-app='proShopper'>
+<head>
+	<title>Pro Shopper</title>
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body ng-controller= 'proCtrl'>
+	<h1>Pro Shopper - Shop like a Pro!</h1>
+	<div class = 'sidebar'>
+		<div><!-- category: {{mainCat}} -->
+			<!-- <ul ng-repeat = 'subs in dropDownCategories'> -->
+				<!-- <li>{{subs.subcategory}}</li> -->
+			<div ng-dropdown-multiselect="" options="allCats" selected-model="selectedCat" extra-settings="dropDownSettings" group-by= 'category'></div>
+			<div>{{selectedCat}}</div>
+			<form>
+				<input ng-model="lowPrice" placeholder="Higher Than" label="low price field">Low Price<br>
+				<input ng-model="highPrice" placeholder="Lower Than" label="high price field">High Price<br>
+				<div>{{lowPrice}}, {{highPrice}}, {{searchTerm}}</div>
+				<input ng-model="searchTerm" placeholder="Search for something!">
+				<button ng-click="runSearch()">Search!!</button>
+			</form>
+		</div>
+	</div>
+	<div>
+		<div class = 'results' ng-repeat = "id in results | orderBy:'display_time'">
+			<a href="https://www.ksl.com/index.php?nid=218&ad={{id.sid}}">Ad #:{{id.sid}}</a> <br>
+			{{id.display_time}}<br>
+			{{id.title}} ${{id.price}}<br>
+			{{id.body}}<br>
+			<img class = 'smallImg' src="{{id.image}}">
+			{{id.contactname}} {{id.contacthomephone}}{{id.contactworkphone}}{{id.contactcellphone}}
+			
+		</div>
+	</div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-animate.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.9.3/lodash.min.js"></script>
+	<script src="https://rawgit.com/dotansimha/angularjs-dropdown-multiselect/master/src/angularjs-dropdown-multiselect.js"></script> <!-- will need to be hosted or found on a CDN -->
+	<script src="js/app.js"></script>
+	<script src="js/ctrl.js"></script>
+	<script src="js/svc.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+write the map function as though it doesn't exist on the array prototype
+
+Arrray.prototype.map = function(fn){
+	var response = [];
+	return response
+}

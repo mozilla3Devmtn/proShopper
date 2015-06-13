@@ -1,0 +1,5 @@
+JSON notes
+
+http://www.ksl.com/classifieds/api.php?nid=218&id=34529838&cmd=ad
+
+displaytime: "1431430880554" is decoded with date.parse(now)//or other date object.  Number of ms since Jan 1 1970

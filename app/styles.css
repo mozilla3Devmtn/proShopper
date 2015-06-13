@@ -1,0 +1,20 @@
+.sidebar{
+	height: 100%;
+	width: 20%;
+	background-color: gray;
+	border: 1px solid black;
+	float: left;
+}
+
+.results{
+	width: 50%;
+	background-color: #F0FFFF;
+	border: 2px solid black;
+	float: none;
+	clear: both;
+}
+
+.smallImg{
+	height: 25%;
+	width: 25%;
+}

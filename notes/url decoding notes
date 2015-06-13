@@ -1,0 +1,50 @@
+https://www.ksl.com/index.php?nid=13 (main classifieds page)
+
+https://www.ksl.com/index.php?nid=231&cat=556&category=100 (auto parts/auto accessories)
+
+https://www.ksl.com/index.php?nid=218&ad=34016481&cat=&lpid=3&search=&ad_cid=6(other real estate/investment properties/ad 34016481)
+
+https://www.ksl.com/index.php?nid=389&search=&ssid=34016481&rnid=218#1(popout photo viewer/ad 34016481/picture 1)
+
+
+http://www.ksl.com/classifieds/api.php?cmd=list (list all classified ads through old API)
+roughly equivalent to 
+https://www.ksl.com/index.php?nid=231
+
+Site:
+https://www.ksl.com/index.php?nid=218&ad=34923897&cat=&lpid=&search=&ad_cid=5
+API:
+http://www.ksl.com/classifieds/api.php?nid=218&id=34529838&cmd=ad
+
+site:
+https://www.ksl.com/index.php?nid=231&sid=74268&subcat=144&sort=1
+
+site: 
+pid= (page number for search results)
+ad_cid= (??)
+cat= 
+nid=218 (classified ad detail page view)
+nid=231 (classified list view)
+category=142 (recreational vehicles main category view)
+subcat=144 (motorcycles, road bkes used)
+sort=1 (sort by listing time, newest first, numbered 1-5 [1, newest to oldest][2, oldest to newest][3, $ high to low][4, $ low to high][5, best match])
+
+individual ad view only requires:
+nid=218
+ad= (ad # === sid # from API query)
+
+API:
+cmd= (categories, list, ad)
+id= (subcategory ID# )
+http://www.ksl.com/classifieds/api.php?id=94&cmd=list
+returns all results from category 94
+http://www.ksl.com/classifieds/api.php?id=94&cmd=list&nid=144&s=mean+streak&c=3
+retuns 3 list results(unsorted) within category 144(motorcycles, road bikes used) matching search string(mean streak)
+
+http://www.ksl.com/classifieds/api.php?cmd=list&nid=464&s=%22c50%22
+
+ng-dropdown-multiselect
+ng-repeat array items
+in controller, query ksl api, send results to firebase then populate view with firebase data
+
+$interval for delay

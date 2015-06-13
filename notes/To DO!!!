@@ -1,0 +1,24 @@
+To DO!!!
+figure out search params
+	search by price, keyword, post date
+	multiple or single category search 
+	button to show KSL page for search term?
+figure out dropdown boxes with category and subcategory
+	show selected categories
+
+sort items by time listed
+refresh listings at set interval
+make sidebar/search boxes sticky
+make sidebar/search boxes pretty
+make ad details pretty	
+	limit amount of body text displayed?
+	show multiple pictures?
+	show seller contact info?
+	more ads by seller?
+set up firebase to store data
+fix service to send JSON requests and store data on firebase
+fix controller to sort incoming data
+inject KSL page for clicked ad result using ng-route
+iFrame for page injection and menu persistence
+add KBB price search?
+
